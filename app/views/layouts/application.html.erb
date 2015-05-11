@@ -15,18 +15,33 @@
 
   <!-- Navigation Bar -->
   <nav class="navbar navbar-fixed-top navbar-default">
+
     <div class="container">
-      <%= link_to 'Cookbook', '', class: 'btn btn-lg btn-success', id: 'logo' %>
-      <div class="nav_item">
-        <%= link_to 'link 1', '', class: 'btn btn-default btn-warning' %>
+
+      <div class="navbar-header">
+
+        <!-- For mobile display -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#nav-content">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <%= link_to 'Cookbook', '', class: 'navbar-brand' %>
       </div>
-      <div class="nav_item">
-        <%= link_to 'link 2', '', class: 'btn btn-default btn-warning' %>
+
+      <div id="nav-content" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'link 1', '' %></li>
+          <li><%= link_to 'link 2', '' %></li>
+          <li><%= link_to 'link 3', '' %></li>
+        </ul>
       </div>
-      <div class="nav_item">
-        <%= link_to 'link 3', '', class: 'btn btn-default btn-warning' %>
-      </div>
+
     </div>
+
   </nav>
 
   <div class="container">
