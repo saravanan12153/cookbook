@@ -1,0 +1,17 @@
+<h1>Recipes</h1>
+
+<hr>
+
+<%= div_for @recipes, class: 'row' do |recipe| %>
+  <div class="col-md-2">
+    <%= div_for recipe.chef, class: 'chef-info center' do %>
+
+    <% end %>
+  </div>
+
+  <div class="col-lg-8 well">
+    <h4><%= link_to recipe.name, '' %></h4>
+    <%= simple_format recipe.summary %>
+    <p class="pull-right"><small><%= time_ago_in_words recipe.created_at %> ago</small></p>
+  </div>
+<% end %>
