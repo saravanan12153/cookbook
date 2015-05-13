@@ -5,11 +5,30 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.find params[:id]
   end
 
   def new
     @recipe = Recipe.new
+  end
+
+  def create
+    @recipe = Recipe.new recipe_params
+    # TODO: Set the current user as the chef.
+    @recipe.chef = Chef.first
+
+    if @recipe.save
+      flash[:success] = 'Your recipe was created successfully!'
+      redirect_to recipes_path
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def recipe_params
+    params.require(:recipe).permit(:name, :summary, :description)
   end
 
 end
