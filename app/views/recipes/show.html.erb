@@ -1,0 +1,28 @@
+<section>
+
+  <h1><%= @recipe.name %></h1>
+
+  <div class="row">
+
+    <div class="col-md-4 pull-right text-center">
+
+      <%= gravatar_for @recipe.chef, size: 200 %>
+      <h5><%= @recipe.chef.name %></h5>
+
+    </div>
+
+    <div class="col-md-8">
+
+      <p class="lead"><%= @recipe.summary %></p>
+      <div class="well">
+
+        <p><strong>Steps</strong></p>
+        <%= simple_format @recipe.description %>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
