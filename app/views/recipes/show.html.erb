@@ -5,6 +5,7 @@
     <header>
 
       <h1><%= @recipe.name %></h1>
+      <hr>
 
     </header>
 
@@ -20,6 +21,7 @@
 
       <div class="col-md-8">
 
+        <%= link_to 'Edit', edit_recipe_path(@recipe), class: 'btn btn-primary pull-right' %>
         <p class="lead"><%= @recipe.summary %></p>
         <section class="well">
 
