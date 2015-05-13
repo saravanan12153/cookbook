@@ -2,12 +2,7 @@
 
   <article>
 
-    <header>
-
-      <h1><%= @recipe.name %></h1>
-      <hr>
-
-    </header>
+    <%= render 'shared/header', title: @recipe.name %>
 
     <div class="row">
 

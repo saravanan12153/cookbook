@@ -1,0 +1,24 @@
+<!-- Object is provided by the call to render() -->
+<% if object.errors.any? %>
+
+  <div class="row">
+
+    <div class="alert alert-danger col-md-8 col-md-offset-2">
+
+      <h5><strong>Please correct the following errors:</strong></h5>
+
+      <ul>
+
+        <% object.errors.full_messages.each do |error| %>
+
+          <li><%= error %></li>
+
+        <% end %>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+<% end %>

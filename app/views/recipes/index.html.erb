@@ -1,9 +1,6 @@
 <main>
 
-  <header>
-    <h1>Recipes</h1>
-    <hr>
-  </header>
+  <%= render 'shared/header', title: 'Recipes' %>
 
   <%= div_for @recipes, class: 'row article' do |recipe| %>
 
