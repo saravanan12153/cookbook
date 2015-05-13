@@ -1,0 +1,63 @@
+<main>
+
+  <header>
+
+    <h1>Edit <%= @recipe.name %></h1>
+    <hr>
+
+  </header>
+
+  <% if @recipe.errors.any? %>
+
+    <div class="row">
+
+      <div class="alert alert-danger col-md-8 col-md-offset-2">
+
+        <h5><strong>Please correct the following errors:</strong></h5>
+
+        <ul>
+
+          <% @recipe.errors.full_messages.each do |error| %>
+
+            <li><%= error %></li>
+
+          <% end %>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  <% end %>
+
+  <div class="row">
+
+    <div class="well col-md-8 col-md-offset-2">
+
+      <%= form_for @recipe do |f| %>
+
+        <div class="form-group">
+          <%= f.label :name, class: 'form-label' %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :summary, class: 'form-label' %>
+          <%= f.text_field :summary, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :description, class: 'form-label' %>
+          <%= f.text_area :description, class: 'form-control', rows: 10 %>
+        </div>
+
+        <%= f.submit 'Edit', class: 'btn btn-success form-control' %>
+
+      <% end %>
+
+    </div>
+
+  </div>
+
+</main>
