@@ -1,25 +1,30 @@
-<h1>Recipes</h1>
+<main>
 
-<hr>
+  <header>
+    <h1>Recipes</h1>
+    <hr>
+  </header>
 
-<%= div_for @recipes, class: 'row' do |recipe| %>
+  <%= div_for @recipes, class: 'row article' do |recipe| %>
 
-  <div class="col-md-2">
+    <div class="col-md-2">
 
-    <%= div_for recipe.chef, class: 'chef-info text-center' do %>
+      <%= div_for recipe.chef, class: 'chef-info text-center' do %>
 
-      <%= gravatar_for recipe.chef, size: 100 %>
-      <h5><%= recipe.chef.name %></h5>
+        <%= gravatar_for recipe.chef, size: 100 %>
+        <h5><%= recipe.chef.name %></h5>
+
+      <% end %>
+
+    </div>
+
+    <%= div_for recipe, class: 'col-lg-8 well' do %>
+
+      <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
+      <%= simple_format recipe.summary %>
+      <p class="pull-right"><small><%= time_ago_in_words recipe.created_at %> ago</small></p>
 
     <% end %>
-
-  </div>
-
-  <%= div_for recipe, class: 'col-lg-8 well' do %>
-
-    <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
-    <%= simple_format recipe.summary %>
-    <p class="pull-right"><small><%= time_ago_in_words recipe.created_at %> ago</small></p>
-
   <% end %>
-<% end %>
+
+</main>

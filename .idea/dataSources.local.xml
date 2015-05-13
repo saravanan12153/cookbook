@@ -2,5 +2,6 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails Cookbook: development" uuid="7fcb906f-c380-4052-a9d1-57adad3608a6" />
+    <data-source name="Rails Cookbook: test" uuid="b1b8e3c9-ff30-402a-8c5e-c0423628fd17" />
   </component>
 </project>

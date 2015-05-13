@@ -1,28 +1,37 @@
-<section>
+<main>
 
-  <h1><%= @recipe.name %></h1>
+  <article>
 
-  <div class="row">
+    <header>
 
-    <div class="col-md-4 pull-right text-center">
+      <h1><%= @recipe.name %></h1>
 
-      <%= gravatar_for @recipe.chef, size: 200 %>
-      <h5><%= @recipe.chef.name %></h5>
+    </header>
 
-    </div>
+    <div class="row">
 
-    <div class="col-md-8">
+      <!-- User details to the right of the recipe information. -->
+      <div class="col-md-4 pull-right text-center">
 
-      <p class="lead"><%= @recipe.summary %></p>
-      <div class="well">
+        <%= gravatar_for @recipe.chef, size: 200 %>
+        <h5><%= @recipe.chef.name %></h5>
 
-        <p><strong>Steps</strong></p>
-        <%= simple_format @recipe.description %>
+      </div>
+
+      <div class="col-md-8">
+
+        <p class="lead"><%= @recipe.summary %></p>
+        <section class="well">
+
+          <p><strong>Steps</strong></p>
+          <%= simple_format @recipe.description %>
+
+        </section>
 
       </div>
 
     </div>
 
-  </div>
+  </article>
 
-</section>
+</main>
