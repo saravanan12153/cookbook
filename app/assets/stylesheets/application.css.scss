@@ -1,7 +1,9 @@
 $navbar-default-bg: #ff8c00;
 $navbar-default-link-color: white;
-$navbar-default-link-hover-color: #777;
-$navbar-default-brand-hover-color: #777;
+$navbar-default-link-hover-color: white;
+$navbar-default-link-hover-bg: #ee6a00;
+$navbar-default-link-active-bg: $navbar-default-link-hover-bg;
+$navbar-default-link-active-color: white;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -20,4 +22,12 @@ footer {
 .gravatar {
   margin-top: 10px;
   border-radius: 10px;
+}
+
+#fab {
+  position: fixed;
+  border-radius: 50%;
+  top: 90%;
+  left: 75%;
+  box-shadow: 0 2px 5px 0.5px lighten($gray-base, 46.7%);
 }
