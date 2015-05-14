@@ -24,6 +24,10 @@
     <% end %>
   <% end %>
 
-  <%= link_to '+', new_recipe_path, id: 'fab', class: 'btn btn-lg btn-primary' %>
+  <div id="fab">
+    <%= link_to new_recipe_path, class: 'btn btn-primary' do %>
+      <i class="glyphicon glyphicon-plus"></i>
+    <% end %>
+  </div>
 
 </main>
