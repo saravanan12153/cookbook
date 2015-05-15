@@ -15,15 +15,15 @@
 
     </div>
 
-    <%= div_for recipe, class: 'col-lg-10 well' do %>
+    <%= div_for recipe, class: 'col-lg-10 recipe well' do %>
 
       <h4>
         <%= link_to recipe.name, recipe_path(recipe) %>
-        <%= image_tag recipe.picture.url, size: '200x150', class: 'gravatar pull-right' if recipe.picture? %>
+        <%= image_tag recipe.picture.url, size: '200x150', class: 'preview pull-right' if recipe.picture? %>
       </h4>
       <%= simple_format recipe.summary %>
       <div style="clear: right"></div>
-      <p class="pull-right"><small><%= time_ago_in_words recipe.created_at %> ago</small></p>
+      <span class="pull-right help-block"><small><%= time_ago_in_words recipe.created_at %> ago</small></span>
 
     <% end %>
 

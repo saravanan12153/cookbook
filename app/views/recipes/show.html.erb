@@ -17,9 +17,6 @@
       <div class="col-md-8">
 
         <p class="lead"><%= @recipe.summary %></p>
-        <div class="show-recipe text-center">
-          <%= image_tag @recipe.picture.url, class: 'gravatar' if @recipe.picture? %>
-        </div>
         <section class="well">
 
           <p><strong>Steps</strong></p>
