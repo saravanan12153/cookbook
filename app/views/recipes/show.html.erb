@@ -18,6 +18,7 @@
 
         <%= link_to 'Edit', edit_recipe_path(@recipe), class: 'btn btn-primary pull-right' %>
         <p class="lead"><%= @recipe.summary %></p>
+        <div class="show-recipe"><%= image_tag @recipe.picture.url, class: 'gravatar' if @recipe.picture? %></div>
         <section class="well">
 
           <p><strong>Steps</strong></p>

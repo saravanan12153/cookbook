@@ -15,20 +15,31 @@
 
     </div>
 
-    <%= div_for recipe, class: 'col-lg-8 well' do %>
+    <%= div_for recipe, class: 'col-lg-6 well' do %>
 
       <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
       <%= simple_format recipe.summary %>
       <p class="pull-right"><small><%= time_ago_in_words recipe.created_at %> ago</small></p>
 
     <% end %>
+
+    <div class="col-md-4">
+
+      <%= image_tag recipe.picture.url, size: '250 x 150', class: 'gravatar' if recipe.picture? %>
+
+    </div>
+
   <% end %>
 
   <div id="fab">
+
     <label class="text-capitalize">Add a Recipe</label>
     <%= link_to new_recipe_path, class: 'btn btn-primary', alt: 'Add a Recipe' do %>
+
       <i class="glyphicon glyphicon-plus"></i>
+
     <% end %>
+
   </div>
 
 </main>

@@ -24,6 +24,10 @@ footer {
   border-radius: 10px;
 }
 
+.show-recipe {
+  margin: 10px;
+}
+
 // These styles were inspired by the floating action button introduced by Google.
 #fab {
   position: fixed;
@@ -31,32 +35,32 @@ footer {
   right: 0;
   margin-bottom: 25px;
   margin-right: 25px;
-}
 
-#fab a {
-  position: relative;
-  border-radius: 50%;
-  border: none;
-  width: 56px;
-  height: 56px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-}
+  a {
+    position: relative;
+    border-radius: 50%;
+    border: none;
+    width: 56px;
+    height: 56px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
 
-#fab a:hover {
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .14), 0 6px 12px rgba(0, 0, 0, .28);
-  background-color: $btn-primary-bg;
-}
+    &:hover {
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, .14), 0 6px 12px rgba(0, 0, 0, .28);
+      background-color: $btn-primary-bg;
+    }
+  }
 
-#fab label {
-  background-color: rgba(70, 70, 70, 0.9);
-  color: #ececec;
-  padding: 5px;
-  border-radius: 2px;
-  display: none;
-}
+  label {
+    background-color: rgba(70, 70, 70, 0.9);
+    color: #ececec;
+    padding: 5px;
+    border-radius: 2px;
+    display: none;
+  }
 
-#fab i {
-  top: 0;
-  margin-top: 14px;
+  i {
+    top: 0;
+    margin-top: 14px;
+  }
 }
 // End of FAB styles.
