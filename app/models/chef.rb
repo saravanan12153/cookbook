@@ -6,4 +6,5 @@ class Chef < ActiveRecord::Base
             format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
 
   has_many :recipes
+  has_many :likes
 end

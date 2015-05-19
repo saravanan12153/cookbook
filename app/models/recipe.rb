@@ -9,6 +9,7 @@ class Recipe < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
 
   belongs_to :chef
+  has_many :likes
 
   private
 
