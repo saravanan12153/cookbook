@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.sort_by { |recipe| recipe.liked }.reverse
   end
 
   def show
