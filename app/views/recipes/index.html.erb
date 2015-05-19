@@ -23,7 +23,19 @@
       </h4>
       <%= simple_format recipe.summary %>
       <div style="clear: right"></div>
-      <span class="pull-right help-block"><small><%= time_ago_in_words recipe.created_at %> ago</small></span>
+      <span class="pull-right help-block">
+
+        <%= link_to like_recipe_path(recipe, like: true), method: :post do %>
+              <i class="glyphicon glyphicon-thumbs-up"></i>
+            <% end %>
+        <%= recipe.liked %>
+        &nbsp;
+        <%= link_to like_recipe_path(recipe, like: false), method: :post do %>
+              <i class="glyphicon glyphicon-thumbs-down"></i>
+            <% end %>
+        <%= recipe.disliked %>
+
+      </span>
 
     <% end %>
 
