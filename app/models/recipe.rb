@@ -11,6 +11,14 @@ class Recipe < ActiveRecord::Base
   belongs_to :chef
   has_many :likes
 
+  def liked
+    Like.liked(self).count
+  end
+
+  def disliked
+    Like.disliked(self).count
+  end
+
   private
 
   def picture_size

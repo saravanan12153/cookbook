@@ -40,6 +40,14 @@ class RecipesController < ApplicationController
     end
   end
 
+  def like
+    @recipe = Recipe.find(params[:id])
+    like = Like.find_or_create_by(chef: Chef.first, recipe: @recipe)
+
+    like.update(like: params[:like])
+    redirect_to :back
+  end
+
   private
 
   def recipe_params

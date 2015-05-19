@@ -24,13 +24,15 @@
 
           <div class="pull-right">
 
-            <%= link_to '' do %>
+            <%= link_to like_recipe_path(@recipe, like: true), method: :post do %>
               <i class="glyphicon glyphicon-thumbs-up"></i>
-            <% end %> 0
+            <% end %>
+            <%= @recipe.liked %>
             &nbsp;
-            <%= link_to '' do %>
+            <%= link_to like_recipe_path(@recipe, like: false), method: :post do %>
               <i class="glyphicon glyphicon-thumbs-down"></i>
-            <% end %> 0
+            <% end %>
+            <%= @recipe.disliked %>
 
           </div>
 
