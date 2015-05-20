@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="474a9b10-f37c-4b28-b680-a3114543a103" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/chefs/_form.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/chefs/edit.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/chefs/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/chefs_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/chefs_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chefs/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/chefs/edit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Cookbook.iws" />
@@ -108,21 +106,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chefs_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="chefs_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/chefs_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.4955947">
+              <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/chefs/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.3333334">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -200,8 +198,8 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/chefs/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/chefs/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/chefs_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/chefs/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/chefs_controller.rb" />
       </list>
     </option>
   </component>
@@ -820,7 +818,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432136088903</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added the registration page.">
+      <created>1432148591839</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1432148591839</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -828,7 +832,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="98" y="125" width="1724" height="834" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32657418" sideWeight="0.49574015" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32657418" sideWeight="0.49574015" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5042598" order="7" side_tool="true" content_ui="tabs" />
@@ -861,7 +865,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added chef information to recipe list. Added method for getting a users gravatar image." />
     <MESSAGE value="Added show page for recipes. Added some navigation." />
     <MESSAGE value="Added the new recipe page. Attempted to use HTML5 elements to give semantic meaning to pages." />
     <MESSAGE value="Added Recipe create form and actions. Made a partial for displaying flash messages." />
@@ -886,7 +889,8 @@
     <MESSAGE value="Added password digest to Chef model as well as authentication methods." />
     <MESSAGE value="Added Bcrypt gem." />
     <MESSAGE value="Added chef routes and controller." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added chef routes and controller." />
+    <MESSAGE value="Added the registration page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the registration page." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1272,18 +1276,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/chefs_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/chefs/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state vertical-scroll-proportion="-1.3333334">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/chefs/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/chefs_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4955947">
+          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
           <folding />
         </state>
       </provider>
