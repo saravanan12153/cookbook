@@ -32,6 +32,9 @@ gem 'carrierwave'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate', '0.0.10'
 
+# Authentication
+gem 'bcrypt'
+
 
 gem 'mini_magick', '3.8.0'
 

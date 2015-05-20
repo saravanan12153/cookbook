@@ -1,13 +1,20 @@
 <component name="ProjectDictionaryState">
   <dictionary name="rdurel">
     <words>
+      <w>bcrypt</w>
       <w>carrierwave</w>
       <w>durel</w>
+      <w>github</w>
       <w>glyphicon</w>
       <w>gravatar</w>
+      <w>jbuilder</w>
       <w>jumbotron</w>
       <w>navbar</w>
+      <w>runtimes</w>
+      <w>sdoc</w>
+      <w>therubyracer</w>
       <w>turbolinks</w>
+      <w>uglifier</w>
     </words>
   </dictionary>
 </component>
