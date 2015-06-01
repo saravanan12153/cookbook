@@ -1,0 +1,44 @@
+<main>
+  <article>
+    <%= render 'shared/header', title: @chef.name %>
+
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 text-center">
+        <%= gravatar_for @chef, size: 200 %>
+        <hr>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <%= will_paginate @recipes %>
+    </div>
+
+    <section>
+      <%= div_for @recipes, class: 'row' do |recipe| %>
+        <div class="col-lg-10 col-lg-offset-1 recipe well">
+          <h4>
+            <%= link_to recipe.name, recipe_path(recipe) %>
+            <%= image_tag recipe.picture.url, size: '200x150', class: 'preview pull-right' if recipe.picture? %>
+          </h4>
+
+          <%= simple_format recipe.summary %>
+
+          <div style="clear: right"></div>
+
+          <span class="pull-right help-block">
+
+            <%= link_to like_recipe_path(recipe, like: true), method: :post do %>
+                  <i class="glyphicon glyphicon-thumbs-up"></i>
+                <% end %>
+            <%= recipe.liked %>
+            &nbsp;
+            <%= link_to like_recipe_path(recipe, like: false), method: :post do %>
+                  <i class="glyphicon glyphicon-thumbs-down"></i>
+                <% end %>
+            <%= recipe.disliked %>
+          </span>
+        </div>
+      <% end %>
+    </section>
+  </article>
+</main>
