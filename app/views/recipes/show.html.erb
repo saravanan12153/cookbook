@@ -17,10 +17,13 @@
       <div class="col-md-8">
 
         <p class="lead"><%= @recipe.summary %></p>
-        <section class="well">
+        <!-- The column class is needed to fix the padding for the like & dislike buttons. -->
+        <div class="col-md-12 well">
 
           <p><strong>Steps</strong></p>
           <%= simple_format @recipe.description %>
+
+          <div style="clear: right;"></div>
 
           <div class="pull-right">
 
@@ -36,7 +39,7 @@
 
           </div>
 
-        </section>
+        </div>
 
       </div>
 
