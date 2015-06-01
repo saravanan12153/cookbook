@@ -49,6 +49,8 @@
     <%= will_paginate %>
   </div>
 
-  <%= render 'shared/fab', title: 'Add a Recipe', path: new_recipe_path, icon: 'glyphicon glyphicon-plus' %>
+  <% if logged_in? %>
+    <%= render 'shared/fab', title: 'Add a Recipe', path: new_recipe_path, icon: 'glyphicon glyphicon-plus' %>
+  <% end %>
 
 </main>

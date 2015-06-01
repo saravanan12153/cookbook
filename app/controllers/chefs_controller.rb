@@ -7,6 +7,7 @@ class ChefsController < ApplicationController
     @chef = Chef.new chef_params
 
     if @chef.save
+      session[:chef_id] = @chef.id
       flash[:success] = 'Your account has been successfully created.'
       redirect_to recipes_path
     else
