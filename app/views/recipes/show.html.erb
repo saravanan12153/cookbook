@@ -9,7 +9,7 @@
       <!-- User details to the right of the recipe information. -->
       <div class="col-md-4 pull-right text-center">
 
-        <%= gravatar_for @recipe.chef, size: 200 %>
+        <%= link_to gravatar_for(@recipe.chef, size: 200), @recipe.chef %>
         <h5><%= @recipe.chef.name %></h5>
 
       </div>
