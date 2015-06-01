@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
 
-  get 'chefs/new'
+  get 'sessions/create'
 
-  get 'chef/new'
+  get 'sessions/destroy'
 
   root 'pages#home'
 
@@ -16,4 +17,7 @@ Rails.application.routes.draw do
 
   get '/register', to: 'chefs#new'
 
+  get '/login', to: 'sessions#new'
+  get '/logout', to: 'sessions#destroy'
+  post '/login', to: 'sessions#create'
 end
