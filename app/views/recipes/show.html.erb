@@ -43,16 +43,7 @@
     </div>
 
     <!-- Edit Button -->
-    <div id="fab">
-
-      <label class="text-capitalize">Edit</label>
-      <%= link_to edit_recipe_path(@recipe), class: 'btn btn-primary' do %>
-
-        <i class="glyphicon glyphicon-edit"></i>
-
-      <% end %>
-
-    </div>
+    <%= render 'shared/fab', title: 'Edit', path: edit_recipe_path, icon: 'glyphicon glyphicon-edit' %>
 
   </article>
 

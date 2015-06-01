@@ -49,15 +49,6 @@
     <%= will_paginate %>
   </div>
 
-  <div id="fab">
-
-    <label class="text-capitalize">Add a Recipe</label>
-    <%= link_to new_recipe_path, class: 'btn btn-primary', alt: 'Add a Recipe' do %>
-
-      <i class="glyphicon glyphicon-plus"></i>
-
-    <% end %>
-
-  </div>
+  <%= render 'shared/fab', title: 'Add a Recipe', path: new_recipe_path, icon: 'glyphicon glyphicon-plus' %>
 
 </main>
