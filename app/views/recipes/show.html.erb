@@ -46,7 +46,7 @@
     </div>
 
     <!-- Edit Button -->
-    <% if current_user == @chef %>
+    <% if current_user == @recipe.chef && logged_in? %>
       <%= render 'shared/fab', title: 'Edit', path: edit_recipe_path, icon: 'glyphicon glyphicon-edit' %>
     <% end %>
 
