@@ -1,4 +1,7 @@
 class ChefsController < ApplicationController
+  before_action :set_user, only: [:edit, :update, :show]
+  before_action :confirm_user, only: [:edit, :update]
+
   def new
     @chef = Chef.new
   end
@@ -9,22 +12,19 @@ class ChefsController < ApplicationController
     if @chef.save
       session[:chef_id] = @chef.id
       flash[:success] = 'Your account has been successfully created.'
-      redirect_to recipes_path
+      redirect_to @chef
     else
       render :new
     end
   end
 
   def edit
-    @chef = Chef.find params[:id]
   end
 
   def update
-    @chef = Chef.find params[:id]
-
     if @chef.update chef_params
       flash[:success] = 'Your profile has been updated successfully.'
-      redirect_to recipes_path # TODO redirect to user profile.
+      redirect_to @chef
     else
       render :edit
     end
@@ -35,7 +35,6 @@ class ChefsController < ApplicationController
   end
 
   def show
-    @chef = Chef.find params[:id]
     @recipes = @chef.recipes.paginate(page: params[:page], per_page: 3).order(updated_at: :desc)
   end
 
@@ -46,5 +45,16 @@ class ChefsController < ApplicationController
 
   def chef_params
     params.require(:chef).permit :name, :email, :password
+  end
+
+  def set_user
+    @chef = Chef.find params[:id]
+  end
+
+  def confirm_user
+    if current_user != @chef
+      flash[:danger] = "You can't edit other users profiles."
+      redirect_to root_path
+    end
   end
 end
