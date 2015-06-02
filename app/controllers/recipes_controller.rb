@@ -1,11 +1,13 @@
 class RecipesController < ApplicationController
+  before_action :set_recipe, only: [:edit, :update, :show, :like]
+  before_action :require_user, except: [:show, :index]
+  before_action :confirm_user, only: [:edit, :update]
 
   def index
     @recipes = Recipe.paginate(page: params[:page], per_page: 4).order(updated_at: :desc)
   end
 
   def show
-    @recipe = Recipe.find params[:id]
   end
 
   def new
@@ -14,35 +16,30 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new recipe_params
-    # TODO: Set the current user as the chef.
-    @recipe.chef = Chef.first
+    @recipe.chef = current_user
 
     if @recipe.save
       flash[:success] = 'Your recipe was created.'
-      redirect_to recipes_path
+      redirect_to @recipe
     else
       render :new
     end
   end
 
   def edit
-    @recipe = Recipe.find params[:id]
   end
 
   def update
-    @recipe = Recipe.find params[:id]
-
     if @recipe.update recipe_params
       flash[:success] = 'Your recipe was updated.'
-      redirect_to recipes_path
+      redirect_to @recipe
     else
       render :edit
     end
   end
 
   def like
-    @recipe = Recipe.find(params[:id])
-    like = Like.find_or_create_by(chef: Chef.first, recipe: @recipe)
+    like = Like.find_or_create_by(chef: current_user, recipe: @recipe)
 
     like.update(like: params[:like])
     redirect_to :back
@@ -52,6 +49,17 @@ class RecipesController < ApplicationController
 
   def recipe_params
     params.require(:recipe).permit :name, :summary, :description, :picture
+  end
+
+  def set_recipe
+    @recipe = Recipe.find params[:id]
+  end
+
+  def confirm_user
+    if current_user != @recipe.chef
+      flash[:danger] = "You can't edit other users recipes."
+      redirect_to root_path
+    end
   end
 
 end
